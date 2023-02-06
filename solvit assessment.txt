@@ -1,0 +1,92 @@
+      
+      ASSESSMENT Done on 5th,jan 2023
+
+1.
+<?php
+function missing_number($num_list)
+{
+ // construct a new array
+$new_arr = range($num_list[0],max($num_list));                                                    
+// use array_diff to find the missing elements 
+return array_diff($new_arr, $num_list);
+
+}
+print_r(missing_number(array(1,2,3,6,7)));
+?>
+
+2.
+Code : Swap two numbers using a third variable
+
+PHP Code:
+
+<?php
+$a = 15;
+$b = 27;
+ 
+// Swap Logic
+
+echo "\nThe number before swapping is:\n";
+echo "Number a =".$a." and b=".$b;
+
+$temp = $a;
+$a = $b;
+$b = $temp;
+ 
+echo "\nThe number after swapping is: \n";
+echo "Number a =".$a." and b=".$b."\n";
+?>
+
+Code: Swap two variables value without using third variable
+
+<?php
+$a = 15;
+$b = 276;
+echo "\nBefore swapping:  ". $a . ',' . $b;
+list($a, $b) = array($b, $a);
+echo "\nAfter swapping:  ". $a . ',' . $b."\n";
+?>
+
+3.
+for example let create databse called tekno and table called user,
+
+mysql> CREATE DATABASE tekno;
+mysql> USE tekno;
+mysql> CREATE TABLE user(user-id INT AUTO_INCREMENT PRIMARY KEY, user-name VARCHAR(50) UNIQUE, card_number INT);
+mysql>INSERT INTO user VALUE (1, "clara", 1402);
+
+4.
+
+<?php
+   $arr = array("Laptop","Keyboard","Mouse","Keyboard","Keyboard", "Mouse","Keyboard");
+   print_r(array_count_values($arr));
+?>
+Output
+Array
+(
+   [Laptop] => 1
+   [Keyboard] => 4
+   [Mouse] => 2
+)
+5.
+
+<html>  
+<body>  
+<form method="post">  
+    Enter a number:  
+    <input type="number" name="number">  
+    <input type="submit" value="Submit">  
+</form>  
+</body>  
+</html>  
+<?php   
+    if($_POST){  
+        $number = $_POST['number'];   
+        //divide entered number by 2   
+        //if the reminder is 0 then the number is even otherwise the number is odd  
+        if(($number % 2) == 0){  
+            echo "$number is an Even number";  
+        }else{  
+            echo "$number is Odd number";  
+        }  
+    }  
+?>  
